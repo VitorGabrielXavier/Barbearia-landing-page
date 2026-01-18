@@ -17,7 +17,7 @@ header{
     -webkit-backdrop-filter: blur(16px) saturate(120%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     width: 100%;
-    height: 85px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,6 +26,9 @@ header{
     top: 0;
     left: 0;
     z-index: 10000;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    user-select: none;
 }
 
 .img-logo{
@@ -42,12 +45,12 @@ nav ul {
 }
 
 nav ul li {
-    display: flex;
+    display: flex; 
 }
 
 nav ul li .link{
     text-decoration: none;
-    color: #f7f7f6;
+    color: #fff;
     font-weight: 500;
     transition: color 0.5s ease, transform 0.3s ease;
 }
@@ -62,10 +65,7 @@ nav ul li .link:active{
 }
 
 nav ul li .btn-agendar{
-    text-decoration: none;
-    padding-top: 8px;
-    text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     color: #25292e;
     background-color: #c4a76e;
     border: none;
@@ -90,5 +90,111 @@ nav ul li .btn-agendar:active{
     background-repeat: no-repeat; 
     background-position: center;
     width: 100%;
-    height: calc(100vh - 85px);
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    gap: 24px;
+}
+
+.hero-section span{
+    color: #c4a76e;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.hero-section h1{
+    max-width: 900px;
+    font-size: 4.5rem;
+    text-align: center;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+mark{
+    background-color: transparent;
+    color: #c4a76e;
+    font-style: italic;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #d1d5db;
+    font-weight: 300;
+    max-width: 650px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.hero-section .btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    user-select: none;
+}
+
+.btn-container .btn-whatsApp {
+    background-color: #29b44f;
+    color: #fff;
+    width: 275px;
+    height: 70px;
+    font-size: 18px;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.25s ease, transform 0.3s ease;
+}
+
+.btn-container .btn-whatsApp:hover {
+    background-color: #35c45b;
+    transform: translateY(-5px);
+}
+
+.btn-container .btn-whatsApp:active{
+    transform: scale(0.95);
+}
+
+.btn-container .btn-ver-servicos{
+    font-size: 18px;
+    width: 175px;
+    height: 70px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid rgb(255 255 255 / 0.1);
+    border-radius: 0.75rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.btn-container .btn-ver-servicos::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    height: 100%;
+    background: rgba(23, 26, 28, 0.65);
+    backdrop-filter: blur(4px) saturate(120%);
+    -webkit-backdrop-filter: blur(4px) saturate(120%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.btn-container .btn-ver-servicos:hover{
+    transform: translateY(-5px);
+}
+
+.btn-container .btn-ver-servicos:active{
+    transform: scale(0.95);
 }
